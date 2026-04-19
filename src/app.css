@@ -1,0 +1,85 @@
+/* ============================================
+   josephinoo.dev — Design System
+   Nothing-inspired: dot matrix, mono, red accent
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* Colors */
+	--bg-primary: #090909;
+	--bg-secondary: #101010;
+	--bg-card: rgba(255, 255, 255, 0.03);
+	--border: rgba(255, 255, 255, 0.08);
+	--border-hover: rgba(255, 255, 255, 0.18);
+
+	--text-primary: #f0f0f0;
+	--text-secondary: #888;
+	--text-muted: #555;
+
+	/* Nothing red */
+	--accent: #ff3333;
+	--accent-dim: rgba(255, 51, 51, 0.15);
+	--accent-border: rgba(255, 51, 51, 0.4);
+
+	/* Typography */
+	--font-mono: 'Space Mono', 'Courier New', monospace;
+	--font-sans: 'Space Grotesk', -apple-system, sans-serif;
+
+	/* Spacing */
+	--max-width: 760px;
+	--section-gap: 100px;
+
+	/* Transitions */
+	--transition: 0.2s ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.7;
+	font-size: 16px;
+	/* Dot grid background — Nothing aesthetic */
+	background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+	background-size: 24px 24px;
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: var(--text-primary);
+	text-decoration: none;
+	transition: color var(--transition);
+}
+
+a:hover {
+	color: var(--accent);
+}
+
+/* --- Utility --- */
+.mono { font-family: var(--font-mono); }
+.accent { color: var(--accent); }
+.muted { color: var(--text-secondary); }
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* --- Selection --- */
+::selection {
+	background: var(--accent);
+	color: #000;
+}
