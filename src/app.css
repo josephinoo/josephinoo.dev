@@ -32,8 +32,8 @@
 	--font-sans: 'Space Grotesk', -apple-system, sans-serif;
 
 	/* Spacing */
-	--max-width: 760px;
-	--section-gap: 100px;
+	--max-width: 1100px;
+	--section-gap: 120px;
 
 	/* Transitions */
 	--transition: 0.2s ease;

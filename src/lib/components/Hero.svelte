@@ -53,48 +53,67 @@
 
 <section id="hero" class:visible>
 	<div class="container">
-		<div class="tag mono">
-			<span class="dot"></span> Available for new opportunities
-		</div>
+		<div class="hero-grid">
+			<div class="hero-text">
+				<div class="tag mono">
+					<span class="dot"></span> Available for new opportunities
+				</div>
 
-		<h1>
-			Hello, I'm<br />
-			<span class="name">Joseph Avila</span>
-		</h1>
+				<h1>
+					Hello, I'm<br />
+					<span class="name">Joseph Avila</span>
+				</h1>
 
-		<div class="typewriter mono">
-			<span>{typedText}</span><span class="cursor" class:hidden={!showCursor}>_</span>
-		</div>
+				<div class="typewriter mono">
+					<span>{typedText}</span><span class="cursor" class:hidden={!showCursor}>_</span>
+				</div>
 
-		<p class="bio">
-			Building reliable systems with <strong>Clojure</strong>, extracting value from data with
-			<strong>Python</strong>, and crafting intelligent solutions at the intersection of
-			software engineering and machine learning.
-		</p>
+				<p class="bio">
+					Building reliable systems with <strong>Clojure</strong>, extracting value from data with
+					<strong>Python</strong>, and crafting intelligent solutions at the intersection of
+					software engineering and machine learning.
+				</p>
 
-		<div class="cta-row">
-			<a href="#contact" class="btn-primary">
-				Get in touch <span class="arrow">→</span>
-			</a>
-			<a href="https://github.com/josephinoo" target="_blank" rel="noopener" class="btn-ghost">
-				<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-					<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-				</svg>
-				josephinoo
-			</a>
-		</div>
+				<div class="cta-row">
+					<a href="#contact" class="btn-primary">
+						Get in touch <span class="arrow">→</span>
+					</a>
+					<a href="https://github.com/josephinoo" target="_blank" rel="noopener" class="btn-ghost">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+						</svg>
+						josephinoo
+					</a>
+				</div>
 
-		<div class="scroll-hint mono">
-			scroll <span>↓</span>
+				<div class="scroll-hint mono">
+					scroll <span>↓</span>
+				</div>
+			</div>
+
+			<div class="hero-visual">
+				<div class="visual-content">
+					<svg class="asterisk-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						<g transform="translate(50,50)">
+							<rect x="-4" y="-40" width="8" height="80" rx="2" fill="var(--accent)" />
+							<rect x="-4" y="-40" width="8" height="80" rx="2" fill="var(--accent)" transform="rotate(60)" />
+							<rect x="-4" y="-40" width="8" height="80" rx="2" fill="var(--accent)" transform="rotate(-60)" />
+						</g>
+					</svg>
+					<div class="visual-circle"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
 <style>
 	#hero {
+		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		padding: 140px 24px 80px;
+		justify-content: center;
+		padding: 0 24px;
 		opacity: 0;
 		transform: translateY(16px);
 		transition: opacity 0.8s ease, transform 0.8s ease;
@@ -109,7 +128,57 @@
 		max-width: var(--max-width);
 		margin: 0 auto;
 		width: 100%;
-		padding-top: 80px;
+	}
+
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 1.2fr 0.8fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-visual {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		animation: fadeIn 1s ease 0.8s both;
+	}
+
+	.visual-content {
+		position: relative;
+		width: 100%;
+		max-width: 400px;
+		aspect-ratio: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.asterisk-svg {
+		width: 60%;
+		height: 60%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0.9;
+	}
+
+	.visual-circle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 70%;
+		height: 70%;
+		border: 1px dashed var(--border);
+		border-radius: 50%;
+		z-index: -1;
+		animation: spin 30s linear infinite;
+	}
+
+	@keyframes spin {
+		100% { transform: translate(-50%, -50%) rotate(360deg); }
 	}
 
 	.tag {
@@ -142,11 +211,11 @@
 
 	h1 {
 		font-family: var(--font-mono);
-		font-size: clamp(2.4rem, 7vw, 4.2rem);
+		font-size: clamp(2.8rem, 9vw, 5.5rem);
 		font-weight: 700;
-		line-height: 1.1;
-		letter-spacing: -0.04em;
-		margin-bottom: 20px;
+		line-height: 1;
+		letter-spacing: -0.05em;
+		margin-bottom: 24px;
 		color: var(--text-primary);
 		animation: fadeIn 0.6s ease 0.4s both;
 	}
@@ -173,11 +242,11 @@
 	.cursor.hidden { opacity: 0; }
 
 	.bio {
-		font-size: 1.05rem;
+		font-size: 1.15rem;
 		color: var(--text-secondary);
-		max-width: 560px;
-		line-height: 1.8;
-		margin-bottom: 40px;
+		max-width: 680px;
+		line-height: 1.7;
+		margin-bottom: 48px;
 		animation: fadeIn 0.6s ease 0.6s both;
 	}
 
@@ -269,5 +338,18 @@
 	@keyframes fadeIn {
 		from { opacity: 0; transform: translateY(12px); }
 		to { opacity: 1; transform: translateY(0); }
+	}
+
+	@media (max-width: 900px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+		.hero-visual {
+			display: none; /* Hide visual on smaller screens to keep it clean */
+		}
+		.bio {
+			max-width: 100%;
+		}
 	}
 </style>
