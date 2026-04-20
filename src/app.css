@@ -11,7 +11,7 @@
 }
 
 :root {
-	/* Colors */
+	/* Dark Theme (Default) */
 	--bg-primary: #090909;
 	--bg-secondary: #101010;
 	--bg-card: rgba(255, 255, 255, 0.03);
@@ -21,22 +21,38 @@
 	--text-primary: #f0f0f0;
 	--text-secondary: #b0b0b0;
 	--text-muted: #888888;
+	--dot-color: rgba(255, 255, 255, 0.08);
+	--gradient-name: linear-gradient(135deg, #fff 0%, #aaa 100%);
 
-	/* Nothing red */
+	/* Common */
 	--accent: #ff3333;
 	--accent-dim: rgba(255, 51, 51, 0.15);
 	--accent-border: rgba(255, 51, 51, 0.4);
 
-	/* Typography */
 	--font-mono: 'Space Mono', 'Courier New', monospace;
 	--font-sans: 'Space Grotesk', -apple-system, sans-serif;
 
-	/* Spacing */
 	--max-width: 1100px;
 	--section-gap: 120px;
-
-	/* Transitions */
 	--transition: 0.2s ease;
+}
+
+:root[data-theme='light'] {
+	--bg-primary: #fcfcfc;
+	--bg-secondary: #f0f0f0;
+	--bg-card: rgba(0, 0, 0, 0.03);
+	--border: rgba(0, 0, 0, 0.08);
+	--border-hover: rgba(0, 0, 0, 0.15);
+
+	--text-primary: #121212;
+	--text-secondary: #4a4a4a;
+	--text-muted: #777777;
+	--dot-color: rgba(0, 0, 0, 0.12);
+	--gradient-name: linear-gradient(135deg, #111 0%, #444 100%);
+
+	--accent: #e51a1a;
+	--accent-dim: rgba(229, 26, 26, 0.08);
+	--accent-border: rgba(229, 26, 26, 0.3);
 }
 
 html {
@@ -50,7 +66,7 @@ body {
 	line-height: 1.7;
 	font-size: 16px;
 	/* Dot grid background — Nothing aesthetic */
-	background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+	background-image: radial-gradient(circle, var(--dot-color, rgba(255,255,255,0.04)) 1px, transparent 1px);
 	background-size: 24px 24px;
 	background-attachment: fixed;
 	-webkit-font-smoothing: antialiased;

@@ -3,6 +3,7 @@
   let scrolled = false;
 
   import { onMount } from "svelte";
+  import ThemeToggle from "./ThemeToggle.svelte";
 
   onMount(() => {
     const handleScroll = () => {
@@ -25,18 +26,24 @@
   <div class="nav-inner">
     <a href="/" class="logo" on:click={closeMenu}> josephinoo </a>
 
-    <button class="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
-      <span class:open={menuOpen}></span>
-      <span class:open={menuOpen}></span>
-      <span class:open={menuOpen}></span>
-    </button>
+    <div class="nav-right">
+      <ul class="nav-links" class:open={menuOpen}>
+        <li><a href="/#about" on:click={closeMenu}>About</a></li>
+        <li><a href="/#skills" on:click={closeMenu}>Skills</a></li>
+        <li><a href="/#projects" on:click={closeMenu}>Projects</a></li>
+        <li><a href="/blog" on:click={closeMenu}>Blog</a></li>
+        <li><a href="/#contact" on:click={closeMenu}>Contact</a></li>
+      </ul>
 
-    <ul class="nav-links" class:open={menuOpen}>
-      <li><a href="#about" on:click={closeMenu}>About</a></li>
-      <li><a href="#skills" on:click={closeMenu}>Skills</a></li>
-      <li><a href="#projects" on:click={closeMenu}>Projects</a></li>
-      <li><a href="#contact" on:click={closeMenu}>Contact</a></li>
-    </ul>
+      <div class="nav-controls">
+        <ThemeToggle />
+        <button class="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
+          <span class:open={menuOpen}></span>
+          <span class:open={menuOpen}></span>
+          <span class:open={menuOpen}></span>
+        </button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -55,7 +62,8 @@
   }
 
   nav.scrolled {
-    background: rgba(9, 9, 9, 0.9);
+    background: var(--bg-primary);
+    background-color: color-mix(in srgb, var(--bg-primary), transparent 10%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -67,7 +75,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 16px 0;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
   }
 
   .logo {
@@ -123,6 +137,12 @@
     width: 100%;
   }
 
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
   .hamburger {
     display: none;
     flex-direction: column;
@@ -163,13 +183,13 @@
       top: 100%;
       left: 0;
       right: 0;
-      background: rgba(9, 9, 9, 0.98);
-      backdrop-filter: blur(12px);
+      background: var(--bg-primary);
       flex-direction: column;
       align-items: center;
       gap: 0;
       padding: 16px 0;
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     .nav-links.open {
       display: flex;

@@ -221,7 +221,7 @@
 	}
 
 	.name {
-		background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+		background: var(--gradient-name);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
