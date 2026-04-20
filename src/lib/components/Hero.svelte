@@ -64,7 +64,7 @@
 					<span class="name">Joseph Avila</span>
 				</h1>
 
-				<div class="typewriter mono">
+				<div class="typewriter mono" aria-live="polite">
 					<span>{typedText}</span><span class="cursor" class:hidden={!showCursor}>_</span>
 				</div>
 
@@ -233,6 +233,7 @@
 		margin-bottom: 28px;
 		min-height: 2em;
 		animation: fadeIn 0.6s ease 0.5s both;
+		contain: layout paint;
 	}
 
 	.cursor {
@@ -268,7 +269,7 @@
 		align-items: center;
 		gap: 8px;
 		background: var(--accent);
-		color: #fff;
+		color: #000;
 		font-family: var(--font-mono);
 		font-size: 0.82rem;
 		font-weight: 700;
