@@ -13,7 +13,7 @@
 	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:site_name" content="josephinoo.dev" />
 	<meta property="og:locale" content="es_ES" />
-	<meta property="og:image" content="https://josephinoo.dev/og/{data.slug}.png?v=2" />
+	<meta property="og:image" content="https://josephinoo.dev/og/{data.slug}.png?v={data.meta.date}" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:type" content="image/png" />
@@ -23,7 +23,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="{data.meta.title} — Joseph Avila" />
 	<meta name="twitter:description" content={data.meta.description} />
-	<meta name="twitter:image" content="https://josephinoo.dev/og/{data.slug}.png" />
+	<meta name="twitter:image" content="https://josephinoo.dev/og/{data.slug}.png?v={data.meta.date}" />
 </svelte:head>
 
 <article class="post-container">

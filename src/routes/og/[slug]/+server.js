@@ -11,10 +11,10 @@ export function GET({ params }) {
 
 	// Redirect to the static file
 	return new Response(null, {
-		status: 302,
+		status: 301,
 		headers: {
 			Location: `/og/${slug}.png`,
-			'Cache-Control': 'public, max-age=31536000, immutable'
+			'Cache-Control': 'public, max-age=3600'
 		}
 	});
 }
