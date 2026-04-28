@@ -5,6 +5,25 @@
 <svelte:head>
 	<title>{data.meta.title} — Joseph Avila</title>
 	<meta name="description" content={data.meta.description} />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://josephinoo.dev/blog/{data.slug}" />
+	<meta property="og:title" content="{data.meta.title} — Joseph Avila" />
+	<meta property="og:description" content={data.meta.description} />
+	<meta property="og:site_name" content="josephinoo.dev" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:image" content="https://josephinoo.dev/og/{data.slug}.png?v=2" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:alt" content="Portada del post: {data.meta.title}" />
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{data.meta.title} — Joseph Avila" />
+	<meta name="twitter:description" content={data.meta.description} />
+	<meta name="twitter:image" content="https://josephinoo.dev/og/{data.slug}.png" />
 </svelte:head>
 
 <article class="post-container">

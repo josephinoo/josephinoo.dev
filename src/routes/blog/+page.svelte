@@ -4,6 +4,20 @@
 
 <svelte:head>
 	<title>Blog — Joseph Avila</title>
+	<meta name="description" content="Escritos sobre ingeniería de datos, Python, Streamlit y construcción de proyectos técnicos." />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://josephinoo.dev/blog" />
+	<meta property="og:title" content="Blog — Joseph Avila" />
+	<meta property="og:description" content="Escritos sobre ingeniería de datos, Python, Streamlit y construcción de proyectos técnicos." />
+	<meta property="og:image" content="https://josephinoo.dev/og.png" />
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Blog — Joseph Avila" />
+	<meta name="twitter:description" content="Escritos sobre ingeniería de datos, Python, Streamlit y construcción de proyectos técnicos." />
+	<meta name="twitter:image" content="https://josephinoo.dev/og.png" />
 </svelte:head>
 
 <section id="blog-list">
